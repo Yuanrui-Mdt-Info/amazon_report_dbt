@@ -1,0 +1,38 @@
+
+
+version: 2
+
+sources:
+  - name: yuanrui_crawler
+    description: "A starter dbt model"
+    tables:
+      - name: _airbyte_raw_amazon_asin
+        columns:
+          - name: _airbyte_ab_id
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+          - name: _airbyte_data
+            description: "The primary key for this table"
+            tests:
+              - not_null
+          - name: _airbyte_emitted_at
+            description: "The primary key for this table"
+            tests:
+              - not_null
+      - name: _airbyte_raw_amazon_product_review
+        columns:
+          - name: _airbyte_ab_id
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+          - name: _airbyte_data
+            description: "The primary key for this table"
+            tests:
+              - not_null
+          - name: _airbyte_emitted_at
+            description: "The primary key for this table"
+            tests:
+              - not_null
